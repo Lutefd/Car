@@ -8,8 +8,8 @@ class Controls {
     this.#addKeyboardListeners();
   }
   #addKeyboardListeners() {
-    document.onkeydown = (event) => {
-      switch (event.key) {
+    document.onkeydown = (e) => {
+      switch (e.key) {
         case 'ArrowLeft':
           this.left = true;
           break;
@@ -25,8 +25,8 @@ class Controls {
       }
       console.table(this);
     };
-    document.onkeyup = (event) => {
-      switch (event.key) {
+    document.onkeyup = (e) => {
+      switch (e.key) {
         case `ArrowLeft`:
           this.left = false;
           break;
@@ -34,7 +34,7 @@ class Controls {
           this.right = false;
           break;
         case `ArrowUp`:
-          this.foward = false;
+          this.forward = false;
           break;
         case `ArrowDown`:
           this.down = false;
